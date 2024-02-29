@@ -11,15 +11,15 @@
 
 a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
-
+print(a,'\n',b)
 
 # Solution
 overlap_list = []
 
-# for value in a:
-#     if value in b and value not in overlap_list:
-#         overlap_list.append(value)
-# print(overlap_list)
+for value in a:
+    if value in b and value not in overlap_list:
+        overlap_list.append(value)
+print(overlap_list)
 
 # Solution for Extra 1
 from random import randint
@@ -39,7 +39,8 @@ for value in rand_list1:
 print(overlap_list)
 
 # Solution for Extra 3
-
+overlap_list = [value for value in rand_list1 if value in rand_list2 and value not in overlap_list]
+print(overlap_list)
 
 
 
